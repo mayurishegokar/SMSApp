@@ -35,6 +35,20 @@ form {
 	background-repeat: no-repeat;
 }
 </style>
+<script type="text/javascript">
+	function fees() {
+		document.fn.action = "/fees"
+		document.action.submit();
+	}
+	function batch() {
+		document.fn.action = "/batch"
+		document.action.submit();
+	}
+	function remove() {
+		document.fn.action = "/remove"
+		document.action.submit();
+	}
+</script>
 </head>
 <body>
 	<div class="card">
@@ -215,17 +229,17 @@ form {
 							<td>${s.batchNumber}</td>
 							<td>${s.batchMode}</td>
 							<td>${s.feesPaid}</td>
+							<td><input type="radio" name="id" value="${s.studentId}">
+							</td>
 							<td>
 								<div class="btn-group btn-group-sm" role="group"
 									aria-label="...">
-									<button class="btn btn-outline-success">Pay\Fees</button>
-									<button class="btn btn-outline-primary">ShiftBatch</button>
-									<button class="btn btn-outlinedanger">Remove</button>
-
+									<button class="btn btn-outline-success" onClick="fees()">Pay-Fees</button>
+									<button class="btn btn-outline-primary" onClick="batch()">Shift-Batch</button>
+									<button class="btn btn-outline-danger" onClick="remove()">Remove</button>
 								</div>
 
 							</td>
-
 						</tr>
 					</c:forEach>
 
