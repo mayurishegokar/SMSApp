@@ -8,6 +8,7 @@ public interface StudentServiceI {
 
 	public void saveStudent(Student s);
 	public List<Student> getAllStudent();
+	public List<Student> searchStudentByBatch(String batchNumber);
 	
 
 }

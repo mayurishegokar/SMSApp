@@ -25,5 +25,11 @@ public class StudentServiceImpl implements StudentServiceI {
 		
 		return sr.findAll();
 	}
+
+	@Override
+	public List<Student> searchStudentByBatch(String batchNumber) {
+		List<Student> batch=sr.findAllBybatchNumber(batchNumber);
+		return batch;
+	}
 	
 }
