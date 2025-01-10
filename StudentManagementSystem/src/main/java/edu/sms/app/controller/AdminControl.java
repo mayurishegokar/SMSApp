@@ -63,5 +63,26 @@ public class AdminControl {
 		return "adminscreen";
 	}
 	
+	@RequestMapping("/remove")
+	public String remove(@RequestParam("studentId") int studentId,Model m)
+	{
+		List<Student> list=ssi.removeStudent(studentId);
+		    m.addAttribute("data", list);
+			return "adminscreen";
+		
+	}
+
+	
+	
+	@RequestMapping("/fees")
+	public String onFees(@RequestParam("studentId") int id,Model m)
+	{
+		Student s=ssi.getStudentId(id);
+		m.addAttribute("st", s);
+		return "fees";
+	}
+	
+	
+	
 
 }
