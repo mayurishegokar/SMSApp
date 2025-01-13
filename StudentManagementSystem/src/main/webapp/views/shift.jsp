@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,16 +12,19 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="d-flex justify-content-center align-center">
-		<div class="w-50 align-middle border border-info border-3 mt-2"
+<div class="d-flex justify-content-center align-center">
+
+		<div class="w-50 align-middle border border-info  border-3 mt-2"
 			style="height: 500px">
 			<h6 class="p-3 text-primary ">
 				<u>Instalment Details :-</u>
 			</h6>
+
 			<div class="border border-secondary m-3 p-2">
+
 				<table class="table table-hover border border-secondary ">
 					<tbody>
-						<tr class="table-primary fs-6">
+						<tr class="table-primary fs-6" >
 							<th>Student Id</th>
 							<td>${st.studentId}</td>
 						</tr>
@@ -45,20 +48,33 @@
 
 					</tbody>
 				</table>
-				<form action="payfees">
+
+				<form action="changebatch">
 					<input type="text" name="studentId" value="${st.studentId}"
 						hidden="true">
-					<div class="bg-dark p-2 d-flex justify-content-between">
-						<label for="amount" class="text-info"><b>Enter
-								Installment<br> Amount
-						</b></label> <input type="number" name="ammount" max="30000">
-					</div>
+					<div class="bg-dark p-2  d-flex justify-content-between">
+						<label for="amount" class="text-info"><b>select batch 
+								for update 
+						
+										<select class="select form-control-sm" name="batchNumber">
+												<option value="#" disabled>Select Batch Number</option>
+												<option value="FDJ-185">FDJ-185</option>
+												<option value="REG-185">REG-185</option>
+												<option value="FDJ-161">FDJ-161</option>
+												<option value="REG-161">REG-161</option>
+
+											</select> 
+										
 					<div class="d-flex justify-content-center pt-5">
-						<button class="btn btn-success btn-sm ">Add Installment</button>
+						<button class="btn btn-success btn-sm ">shift batch</button>
 					</div>
 				</form>
+																					
 			</div>
 		</div>
+
+
+
 	</div>
 </body>
 </html>

@@ -213,7 +213,7 @@ form {
 						<th>Course Name</th>
 						<th>Bath No</th>
 						<th>Mode</th>
-						<th>Fess Recived</th>						
+						<th>Fess Recived</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
@@ -235,9 +235,10 @@ form {
 									aria-label="...">
 									<A href="fees?studentId=${s.studentId}"><button
 											name="studentId" class="btn btn-outline-success">Pay-Fees</button></A>
-									<a hrf="shiftbatch?studentId=${s.studentId}"><button
-											name="studentId" class="btn btn-outline-primary">Shift-Batch</button></a>
-									<a href="remove?studentId=${s.studentId }"><button name="studentId" class="btn btn-outline-danger">Remove</button></a>
+									<A href="shiftbatch?studentId=${s.studentId}"><button
+											name="studentId" class="btn btn-outline-primary">Shift-Batch</button></A>
+									<A href="remove?studentId=${s.studentId }"><button
+											name="studentId" class="btn btn-outline-danger">Remove</button></A>
 								</div>
 
 							</td>
@@ -247,6 +248,16 @@ form {
 				</tbody>
 
 			</table>
+			<nav aria-label="...">
+				<ul class="pagination pagination-lg">
+					<li class="page-item"><a class="page-link"
+						href="paging?pageNo=0" tabindex="-1">1</a></li>
+					<li class="page-item"><a class="page-link"
+						href="paging?pageNo=1">2</a></li>
+					<li class="page-item"><a class="page-link"
+						href="paging?pageNo=2">3</a></li>
+				</ul>
+			</nav>
 		</section>
 
 	</div>
